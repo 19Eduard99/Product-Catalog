@@ -1,0 +1,53 @@
+:root {
+  // Base Colors (light)
+  --color-secondary: #89939a;
+  --color-icons: #b4bdc3;
+  --color-elements: #e2e6e9;
+  --color-surface-2: #f5f5f5;
+  --color-surface-1: #fff;
+  --color-black: #0f1121;
+  --color-white: #fff;
+
+  // Accent Colors
+  --color-accent: #313237;
+  --color-accent-hover: #4a4d58;
+  --color-green: #27ae60;
+  --color-red: #eb5757;
+  --default-border: 1px solid var(--color-elements);
+
+  // Product component (light theme)
+  --card-bg: #fff;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --loading-grey: #e0e0e0;
+  --loading-highlight: rgba(0, 0, 0, 0.05);
+  --background-color: #fff;
+  --text-color: #313237;
+  --product-border: 1px solid var(--color-elements);
+}
+
+.dark-theme {
+  // Base Colors (dark)
+  --color-secondary: #75767f;
+  --color-icons: #4a4d58;
+  --color-elements: #3b3e4a;
+  --color-surface-2: #323542;
+  --color-surface-1: #161827;
+  --color-black: #0f1121;
+  --color-white: #f1f2f9;
+
+  // Accent Colors
+  --color-accent: #905bff;
+  --color-accent-hover: #a378ff;
+  --color-green: #27ae60;
+  --color-red: #eb5757;
+  --default-border: 1px solid var(--color-elements);
+
+  // Product component (dark theme)
+  --card-bg: #161827;
+  --shadow-color: rgba(0, 0, 0, 0.6);
+  --loading-grey: #323542;
+  --loading-highlight: rgba(255, 255, 255, 0.1);
+  --background-color: #0f1121;
+  --text-color: #f1f2f9;
+  --product-border: 1px solid transparent;
+}

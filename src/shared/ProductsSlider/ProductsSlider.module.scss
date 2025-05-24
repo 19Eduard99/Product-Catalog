@@ -1,0 +1,99 @@
+@use '../../styles/utils' as utils;
+
+.productsSlider {
+  padding: 28px 0;
+
+  @include utils.on-tablet {
+    padding: 32px 0;
+  }
+
+  @include utils.on-desktop {
+    padding: 40px 0;
+  }
+}
+
+.title {
+  margin-bottom: 24px;
+
+  font-family: utils.$font-main;
+  font-size: 24px;
+  font-weight: 800;
+  font-style: normal;
+  line-height: 140%;
+  color: var(--text-color);
+
+  @include utils.on-tablet {
+    font-size: 32px;
+    line-height: 41px;
+    letter-spacing: -0.01em;
+  }
+}
+
+.header {
+  @extend %flex-between-center;
+}
+
+.slider {
+  &__controls {
+    @extend %flex-center;
+
+    gap: 16px;
+    align-items: center;
+    margin-bottom: 24px;
+
+    &Prev,
+    &Next {
+      @extend %flex-center;
+
+      cursor: pointer;
+
+      align-items: center;
+
+      width: 32px;
+      height: 32px;
+      border: none;
+
+      background-color: var(--color-surface-2);
+
+      transition: background-color utils.$animation-duration;
+
+      &:disabled {
+        cursor: not-allowed;
+        border: var(--default-border);
+        opacity: 0.6;
+        background-color: transparent;
+      }
+
+      span {
+        display: block;
+
+        width: 16px;
+        height: 16px;
+
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+      }
+
+      &:hover {
+        background-color: var(--color-icons);
+      }
+    }
+
+    &Prev .light {
+      background-image: url('/img/icons/arrow-left-gray.svg');
+    }
+
+    &Next .light {
+      background-image: url('/img/icons/arrow-right-gray.svg');
+    }
+
+    &Prev .dark {
+      background-image: url('/img/icons/arrow-left.svg');
+    }
+
+    &Next .dark {
+      background-image: url('/img/icons/arrow-right.svg');
+    }
+  }
+}

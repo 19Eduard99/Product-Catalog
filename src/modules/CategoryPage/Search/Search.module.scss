@@ -1,0 +1,69 @@
+@use '../../../styles/utils' as utils;
+
+.search {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  height: 50%;
+  padding: 10px;
+  border: var(--default-border);
+  border-radius: 40px;
+
+  background: var(--color-surface-1);
+
+  transition: 0.4s;
+
+  @include utils.on-tablet {
+    width: initial;
+  }
+
+  &__input {
+    width: 0;
+    padding: 0;
+    border: none;
+
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 40px;
+    color: var(--color-secondary);
+
+    background: none;
+    outline: none;
+
+    transition: 0.4s;
+  }
+
+  &__icon {
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+    color: white;
+
+    background: var(--color-accent);
+
+    transition: 0.4s;
+  }
+
+  &.active {
+    .search__input {
+      width: calc(100% - 40px);
+      padding: 0 10px;
+
+      @include utils.on-tablet {
+        width: 200px;
+      }
+    }
+
+    .search__icon {
+      background: var(--color-accent);
+    }
+  }
+}
