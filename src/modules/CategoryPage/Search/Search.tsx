@@ -21,6 +21,12 @@ export const Search: React.FC<Props> = ({ category }) => {
   const query = searchParams.get('query') || '';
   const inputRef = useRef<HTMLInputElement>(null);
 
+  useEffect(() => {
+    if (inputRef.current) {
+      inputRef.current.value = query;
+    }
+  }, [query]);
+
   const setSearchWith = useCallback(
     (params: SearchParams) => {
       const search = getSearchWith(searchParams, params);

@@ -5,14 +5,13 @@
 
   width: 100%;
   padding: 20px;
-  border-radius: 6px;
+  border: var(--default-border);
 
   background-color: var(--card-bg);
-  box-shadow: 0 4px 6px var(--shadow-color);
 
   &__preview {
     width: 100%;
-    height: 200px;
+    height: 270px;
   }
 
   &__info {
@@ -21,13 +20,13 @@
 
   &__name {
     margin: 0 0 1rem;
-    font-size: 1.5rem;
-    line-height: 1.5rem;
+    font-size: 1rem;
+    line-height: 1rem;
   }
 
   &__description {
     font-size: 1rem;
-    line-height: 1.4rem;
+    line-height: 1rem;
   }
 
   &--loading {
